@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head><!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script></head>
+   <body>
+      <table border = 1 align="center">
+         {% for key in result %}
+            <tr>
+               <th> {{ key }} </th>
+               <td> <a href={{ book[key] }}>{{book[key][2:]}}</a> </td>
+            </tr>
+            
+         {% endfor %}
+      </table>
+
+      <form action = "http://localhost:5000/" method = "GET" align="center">
+        <p><input type = "submit" value = "Search Again" /></p>
+     </form>
+      
+   </body>
+</html>
